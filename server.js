@@ -7,7 +7,7 @@ const methodOverride = require("method-override");
 
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended: false}));
-app.use("/avengers", avengersController)
+app.use("/", avengersController)
 
 
 

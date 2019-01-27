@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const avengerSchema = mongoose.Schema({
   name: String,
-  superpowers: String
+  superpowers: [{type: String}]
 });
 
 

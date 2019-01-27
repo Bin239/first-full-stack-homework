@@ -2,11 +2,39 @@
 <html lang="en">
     <head>
         <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-    
+
+    <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/avengers">Avengers</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Avenger Attributes</h2>
+      <ul>
+      
+      <% for(let i = 0; i < avengers.length; i++){ %>
+      <li>Name: <%= avengers.name %></li>
+        <li>SuperPowers: <%= avengers.superpowers %></li>
+  
+      <%}%>
+      
+        
+      </ul>
+    </section>
+    <section>
+      <a href="/avengers/<%=avenger._id%>/edit">Edit</a>
+    </section>
+    <section>
+      <form action="/avengers/<%=avenger._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete Avenger</button>
+      </form>
+    </section>
+  </main>
     </body>
 </html>

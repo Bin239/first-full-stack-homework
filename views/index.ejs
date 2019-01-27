@@ -5,12 +5,17 @@
 </head>
 <body>
   <header>
-    <h1>List of Avengers</h1>
+    <h1>Avengers Assemble</h1>
     <nav>
       <ul>
-        <li><a href="/avengers">Avengers</a></li>
+          <% for(let i = 0; i < avengers.length; i++){ %>
+          <li><a href="/<%=avengers[i]._id%>"><%=avengers[i].name%></a></li>
+      
+          <%}%>
+        
       </ul>
     </nav>
   </header>
+  <h3><a href = "/new">Add A New Avenger</a></h3>
 </body>
 </html>

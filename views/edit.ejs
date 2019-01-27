@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <title>Edit Avenger</title>
+    
     </head>
     <body>
     <header>
-    <h1>Edit <%= avenger.name%></h1>
+    <h3>Edit</h3>
     <ul>
-    <li><a href = "/">Home</a></li>
     <li><a href = "/">Home</a></li>
 
     </ul>
+
     </header>
+
+    <form action="/avengers/<%= id %>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%= avengers.name %>">
+        Super-Powers: <input type="text" name="superpowers" value="<%= avengers.superPowers %>">
+        <input type="submit">
+    </form>
+    <form action="/pokemon/<%= id %>?_method=DELETE" method="POST">
+        <input type="submit" value="delete pokemon?">
     </body>
 </html>

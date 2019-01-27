@@ -2,12 +2,15 @@ const express = require("express");
 const router = express.Router();
 const Avenger = require("../models/avengers");
 
+
+
 router.get("/new", (req, res) => {
     res.render("new.ejs");
 });
 
 router.get("/", (req, res) => {
     Avenger.find({}, (err, avengersAssemble) => {
+        conosle.log(req.params.id)
         res.render("index.ejs", {
             avengers: avengersAssemble
         })
